@@ -10,6 +10,25 @@ most certainly damage your hardware.  For starters, a voltage divider
 made of two resistors and an (optional but recommended) reverse
 polarity protection diode will do:
 
+Sowas in der Art:
+
+   +  <- Bordspannung
+  _|_
+ |10k|
+ |___|
+   |
+   o----------o-----> zum Arduino, analoger Eingang
+  _|_      ___|___
+ |4k7|       /|\ | 4,7V
+ |___|      /_|_\
+   |          |
+   o----------o-----> zum Arduino, Masse
+  _|_
+
+So ungefähr, wenn Dir das zuviel Strom braucht kannst Du die Widerstände ganz einfach proportional verändern.
+Also z.B. "beide mal Faktor 1.2" oder 1.4 oder was weiß ich...
+Wenn Dir der Messbereich zu klein ist kannst Du den größeren Widerstand etwas größer machen.
+
 | ![Wiring](http://www.wasserstoffe.de/carrera-hacks/protocol-decode/carrera-decode-Steckplatine.png) |
 |:---:|
 | Image by [Peter Niehues](http://www.wasserstoffe.de/carrera-hacks/) [[CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)] |
